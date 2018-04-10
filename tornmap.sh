@@ -43,7 +43,7 @@ else
 	echo -e "\nLet's scan ^^"
 	#proxychains nmap -sT -Pn -n -sV -v -iR 500 -p 80 -oX /tmp/reportrand.scan
 	proxychains nmap -sT -Pn -n -sV -v $VAR -oX /tmp/reports-$VAR.scan
-	xsltproc /tmp/reports-$VAR -o /tmp/reports-$VAR.html
+	xsltproc /tmp/reports-$VAR.scan -o /tmp/reports-$VAR.html
 	#chmod 777 -R /tmp/reportrand.html
 	echo "To view report, open /tmp/reports-$VAR.html"
 fi
